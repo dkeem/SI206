@@ -12,3 +12,5 @@
 # Make sure the new page is uploaded to your GitHub account.
 
 #Here lies a comment for extra credit
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
