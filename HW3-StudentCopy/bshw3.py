@@ -14,3 +14,12 @@
 #Here lies a comment for extra credit
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
+
+f = open("index.html", 'w')
+
+url = "https://www.si.umich.edu/programs/bachelor-science-information/bsi-admissions"
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+soup = str(soup)
+f = f.write(soup)
+
