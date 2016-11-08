@@ -9,7 +9,14 @@
 # Deliverables:
 # 1) Print the orginal text (150 tokens)
 # 1) Print the new text
+import nltk 
+import random
+from nltk.book import *
+from nltk.tokenize import sent_tokenize, word_tokenize
+
 print("START*******")
+
+
 
 
 print("\n\nEND*******")
