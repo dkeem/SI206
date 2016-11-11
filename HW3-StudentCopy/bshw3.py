@@ -17,9 +17,13 @@ from bs4 import BeautifulSoup
 
 f = open("index.html", 'w')
 
-url = "https://www.si.umich.edu/programs/bachelor-science-information/bsi-admissions"
+url = "http://collemc.people.si.umich.edu/data/bshw3StarterFile.html"
 html = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(html, 'html.parser')
-soup = str(soup)
-f = f.write(soup)
+
+webPage = soup.prettify()
+webPage = webPage.replace("student", "AMAZING students")
+webPage = webPage.replace("https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg", "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-0/p206x206/14141962_10153874492878359_3419118872454018419_n.jpg?oh=48b3ae049106348e65a16dfed3075466&oe=58961321")
+
+f.write(webPage)
 
