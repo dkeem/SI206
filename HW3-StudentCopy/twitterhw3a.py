@@ -12,4 +12,4 @@ auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
 
 #Reference: Stackoverflow - This tweets the picture and the text
-api.update_with_media("media/michigan.jpg", status="#UMSI-206 #Proj3")
+api.update_with_media("michigan.jpg", status="#UMSI-206 #Proj3")
